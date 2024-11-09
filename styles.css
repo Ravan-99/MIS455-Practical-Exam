@@ -22,6 +22,8 @@ header {
 header h1 {
     font-family: 'Lobster', cursive;
 }
+
+/* Navigation styling */
 nav {
     margin-top: 0.5em;
 }
@@ -34,6 +36,8 @@ nav a {
 nav a:hover {
     color: #ffeb3b;
 }
+
+/* Footer styling */
 footer {
     background-color: #333;
     color: white;
@@ -43,11 +47,37 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* main part styling */
 main img {
     width: 100%;
     max-width: 400px;
     height: auto;
     margin: 1em 0;
+}
+
+/* Home Page - Flex css */
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
+}
+
+/* Product Page - Grid css*/
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1em;
+    padding: 2em;
+}
+.product-item {
+    border: 1px solid #ddd;
+    padding: 1em;
+    text-align: center;
+}
+.product-item img {
+    width: 100%;
+    height: auto;
 }
 
 
