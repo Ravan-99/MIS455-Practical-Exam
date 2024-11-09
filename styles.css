@@ -44,6 +44,16 @@ nav a:hover {
     color: #ffeb3b;
 }
 
+/* Images for consistent size */
+main img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 1em;
+}
+
+
 /* Footer styling */
 footer {
     background-color: #4CAF50;
