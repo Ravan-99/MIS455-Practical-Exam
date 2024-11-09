@@ -145,15 +145,6 @@ footer {
     border-radius: 5px;
 }
 
-/* Images for consistent size */
-main img {
-    width: 100%;
-    max-width: auto;
-    height: ;
-    border-radius: 5px;
-    margin-top: 1em;
-}
-
 /* Buttons css */
 button, a {
     cursor: pointer;
