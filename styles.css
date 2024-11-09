@@ -1,15 +1,16 @@
-/* General reset */
+/* General  */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styling with a natural, readable font */
+/* Body styling  */
 body {
     font-family: 'Roboto', sans-serif;
     color: #333;
     line-height: 1.6;
+    background-color: #f9f9f9;
 }
 
 /* Header styles */
@@ -18,16 +19,17 @@ header {
     color: white;
     padding: 1em;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Site title with a fun, welcoming font */
+
 header h1 {
     font-family: 'Lobster', cursive;
-    font-size: 2em;
+    font-size: 2.5em;
     margin-bottom: 0.2em;
 }
 
-/* Navigation styling and hover effect */
+/* Navigation */
 nav {
     margin-top: 0.5em;
 }
@@ -36,6 +38,7 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 nav a:hover {
     color: #ffeb3b;
@@ -43,14 +46,55 @@ nav a:hover {
 
 /* Footer styling */
 footer {
-    background-color:color-mix(in hwb increasing hue, color percentage, color percentage);
-    color: rgb(0, 0, 0);
+    background-color: #4CAF50;
+    color: rgb(255, 255, 255);
     text-align: center;
-    padding: 1em;
+    padding: 2em 0;
     font-size: 0.9em;
+    position: relative;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Main content - Home Page layout (Flexbox) */
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1em;
+    gap: 1.5em;
+    text-align: left;
+}
+
+.footer-content div {
+    flex: 1;
+}
+
+.footer-about p, .footer-links ul, .footer-social a {
+    margin: 0.5em 0;
+}
+
+
+.footer-links li a {
+    color: #ffeb3b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-links li a:hover {
+    color: #ffffff;
+}
+
+.footer-social a {
+    color: #ffeb3b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-social a:hover {
+    color: #ffffff;
+}
+
+/* Home Page -flex */
 .flex-container {
     display: flex;
     justify-content: space-around;
@@ -59,7 +103,20 @@ footer {
     gap: 1.5em;
 }
 
-/* Main content - Product Page layout (Grid) */
+.flex-container section {
+    max-width: 500px;
+    background: white;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.flex-container section:hover {
+    transform: translateY(-5px);
+}
+
+/* Product Page - Grid */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -71,18 +128,79 @@ footer {
     padding: 1em;
     text-align: center;
     border-radius: 8px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
 .product-item img {
     width: 100%;
     height: auto;
     margin-bottom: 0.5em;
+    border-radius: 5px;
 }
 
 /* Images for consistent size */
 main img {
     width: 100%;
     max-width: auto;
-    height: 500px;
+    height: ;
+    border-radius: 5px;
+    margin-top: 1em;
+}
+
+/* Buttons css */
+button, a {
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* General styling for contact page */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2em;
+    gap: 2em;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Contact Information Section */
+.contact-info-section {
+    flex: 1;
+    background: #f8f8f8;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.contact-info-section h2 {
+    font-family: 'Lobster', cursive;
+    margin-bottom: 1em;
+    color: #4CAF50;
+}
+
+.contact-info-section ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.1em;
+}
+
+.contact-info-section li {
+    margin-bottom: 0.5em;
+}
+
+.contact-info-section img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
     border-radius: 5px;
     margin-top: 1em;
 }
